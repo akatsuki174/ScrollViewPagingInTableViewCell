@@ -1,0 +1,2 @@
+# ScrollViewPagingInTableViewCell
+Paging using UIScrollView in UITableViewCell
