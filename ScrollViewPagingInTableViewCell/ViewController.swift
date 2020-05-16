@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        tableView.register(PageScrollCell.nib(), forCellReuseIdentifier: PageScrollCell.reuseIdentifier)
     }
 
 }
@@ -25,8 +25,10 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "hoge"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: PageScrollCell.reuseIdentifier) as? PageScrollCell else { fatalError() }
+        let image = UIImage(named: "image")
+        guard let img = image else { return UITableViewCell() }
+        cell.setContent(images: [img])
         return cell
     }
         

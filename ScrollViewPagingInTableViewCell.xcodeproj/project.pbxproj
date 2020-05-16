@@ -13,6 +13,8 @@
 		18704C28246FCD8D00953A94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18704C26246FCD8D00953A94 /* Main.storyboard */; };
 		18704C2A246FCD8F00953A94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18704C29246FCD8F00953A94 /* Assets.xcassets */; };
 		18704C2D246FCD8F00953A94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18704C2B246FCD8F00953A94 /* LaunchScreen.storyboard */; };
+		18704C36246FD18200953A94 /* PageScrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18704C34246FD18200953A94 /* PageScrollCell.swift */; };
+		18704C37246FD18200953A94 /* PageScrollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18704C35246FD18200953A94 /* PageScrollCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		18704C29246FCD8F00953A94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18704C2C246FCD8F00953A94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18704C2E246FCD8F00953A94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18704C34246FD18200953A94 /* PageScrollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageScrollCell.swift; sourceTree = "<group>"; };
+		18704C35246FD18200953A94 /* PageScrollCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageScrollCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				18704C20246FCD8D00953A94 /* AppDelegate.swift */,
+				18704C34246FD18200953A94 /* PageScrollCell.swift */,
+				18704C35246FD18200953A94 /* PageScrollCell.xib */,
 				18704C22246FCD8D00953A94 /* SceneDelegate.swift */,
 				18704C24246FCD8D00953A94 /* ViewController.swift */,
 				18704C26246FCD8D00953A94 /* Main.storyboard */,
@@ -128,6 +134,7 @@
 				18704C2D246FCD8F00953A94 /* LaunchScreen.storyboard in Resources */,
 				18704C2A246FCD8F00953A94 /* Assets.xcassets in Resources */,
 				18704C28246FCD8D00953A94 /* Main.storyboard in Resources */,
+				18704C37246FD18200953A94 /* PageScrollCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +148,7 @@
 				18704C25246FCD8D00953A94 /* ViewController.swift in Sources */,
 				18704C21246FCD8D00953A94 /* AppDelegate.swift in Sources */,
 				18704C23246FCD8D00953A94 /* SceneDelegate.swift in Sources */,
+				18704C36246FD18200953A94 /* PageScrollCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
