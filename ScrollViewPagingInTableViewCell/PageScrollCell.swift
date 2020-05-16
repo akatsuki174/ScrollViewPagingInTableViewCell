@@ -12,6 +12,7 @@ class PageScrollCell: UITableViewCell {
     
     static var cellName: String = "PageScrollCell"
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
     private let scrollView = UIScrollView()
     private let contentWidth = UIScreen.main.bounds.width
     private lazy var contentHeight: CGFloat = {
@@ -41,6 +42,7 @@ class PageScrollCell: UITableViewCell {
     }
     
     func setContent(item: Item) {
+        titleLabel.text = String(item.id)
         for (index, value) in item.images.enumerated() {
             let imageView = UIImageView(frame: CGRect(x: CGFloat(index) * contentWidth, y: 0, width: contentWidth, height: contentHeight))
             imageView.image = value

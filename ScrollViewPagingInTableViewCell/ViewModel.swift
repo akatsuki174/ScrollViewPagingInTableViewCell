@@ -13,11 +13,11 @@ class ViewModel {
     private var items: [Item] = []
     
     func createItems() {
-        items = [Item(images: createImageArray(), currentIndex: 0),
-                 Item(images: createImageArray(), currentIndex: 0),
-                 Item(images: createImageArray(), currentIndex: 0),
-                 Item(images: createImageArray(), currentIndex: 0),
-                 Item(images: createImageArray(), currentIndex: 0)]
+        items = [Item(id: 1, images: createImageArray(), currentIndex: 0),
+                 Item(id: 2, images: createImageArray(), currentIndex: 0),
+                 Item(id: 3, images: createImageArray(), currentIndex: 0),
+                 Item(id: 4, images: createImageArray(), currentIndex: 0),
+                 Item(id: 5, images: createImageArray(), currentIndex: 0)]
     }
     
     func numberOfRowsInSection(section: Int) -> Int {
@@ -36,6 +36,7 @@ class ViewModel {
 }
 
 struct Item {
+    let id: Int
     let images: [UIImage]
     var currentIndex: Int = 0
 }

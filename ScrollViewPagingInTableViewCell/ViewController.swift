@@ -27,7 +27,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: PageScrollCell.reuseIdentifier) as? PageScrollCell else { fatalError() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: PageScrollCell.reuseIdentifier, for: indexPath) as? PageScrollCell else { fatalError() }
         cell.setContent(item: viewModel.content(index: indexPath.row))
         return cell
     }
