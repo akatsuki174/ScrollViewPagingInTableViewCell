@@ -21,14 +21,12 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PageScrollCell.reuseIdentifier) as? PageScrollCell else { fatalError() }
-        let image = UIImage(named: "image")
-        guard let img = image else { return UITableViewCell() }
-        cell.setContent(images: [img, img, img])
+        cell.setContent(images: [UIImage(named: "image1")!, UIImage(named: "image2")!, UIImage(named: "image3")!])
         return cell
     }
         
