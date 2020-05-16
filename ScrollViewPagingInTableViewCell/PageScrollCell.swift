@@ -24,6 +24,8 @@ class PageScrollCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        scrollView.isPagingEnabled = true
+        scrollView.showsHorizontalScrollIndicator = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -39,10 +41,11 @@ class PageScrollCell: UITableViewCell {
         containerView.addSubview(scrollView)
         
         for (index, value) in images.enumerated() {
-            let imageView = UIImageView(frame: CGRect(x: 0, y: CGFloat(index) * screenWidth, width: screenWidth, height: screenWidth * 0.5))
+            let imageView = UIImageView(frame: CGRect(x: CGFloat(index) * screenWidth, y: 0, width: screenWidth, height: screenWidth * 0.5))
             imageView.image = value
             scrollView.addSubview(imageView)
         }
+        scrollView.contentSize = CGSize(width: screenWidth * CGFloat(images.count), height: screenWidth * 0.5)
     }
     
 }

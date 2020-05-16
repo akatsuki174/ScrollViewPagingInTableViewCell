@@ -28,7 +28,7 @@ extension ViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PageScrollCell.reuseIdentifier) as? PageScrollCell else { fatalError() }
         let image = UIImage(named: "image")
         guard let img = image else { return UITableViewCell() }
-        cell.setContent(images: [img])
+        cell.setContent(images: [img, img, img])
         return cell
     }
         
