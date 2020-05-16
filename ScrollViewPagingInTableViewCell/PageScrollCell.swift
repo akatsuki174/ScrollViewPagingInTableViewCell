@@ -30,6 +30,7 @@ class PageScrollCell: UITableViewCell {
         super.awakeFromNib()
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
+        scrollView.delegate = self
 
         scrollView.frame = CGRect(x: 0, y: 0, width: contentWidth, height: contentHeight)
         containerView.addSubview(scrollView)
@@ -49,4 +50,11 @@ class PageScrollCell: UITableViewCell {
         scrollView.contentSize = CGSize(width: contentWidth * CGFloat(item.images.count), height: contentHeight)
     }
     
+}
+
+extension PageScrollCell: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+            let pageIndex = round(scrollView.contentOffset.x/contentWidth)
+        print("index-------------\(pageIndex)")
+    }
 }
