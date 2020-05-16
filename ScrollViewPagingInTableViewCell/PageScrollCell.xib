@@ -24,7 +24,6 @@
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDS-tl-PS8">
                         <rect key="frame" x="0.0" y="79" width="320" height="160"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ZDS-tl-PS8" secondAttribute="height" multiplier="2:1" id="NMs-2U-pWt"/>
                         </constraints>
