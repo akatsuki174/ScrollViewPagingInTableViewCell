@@ -39,13 +39,14 @@ class PageScrollCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setContent(images: [UIImage]) {
-        for (index, value) in images.enumerated() {
+    func setContent(item: Item) {
+        for (index, value) in item.images.enumerated() {
             let imageView = UIImageView(frame: CGRect(x: CGFloat(index) * contentWidth, y: 0, width: contentWidth, height: contentHeight))
             imageView.image = value
             scrollView.addSubview(imageView)
         }
-        scrollView.contentSize = CGSize(width: contentWidth * CGFloat(images.count), height: contentHeight)
+        scrollView.frame = CGRect(x: CGFloat(item.currentIndex) * contentWidth, y: 0, width: contentWidth, height: contentHeight)
+        scrollView.contentSize = CGSize(width: contentWidth * CGFloat(item.images.count), height: contentHeight)
     }
     
 }
