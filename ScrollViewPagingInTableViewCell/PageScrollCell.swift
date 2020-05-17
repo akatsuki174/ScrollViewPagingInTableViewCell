@@ -33,6 +33,7 @@ class PageScrollCell: UITableViewCell {
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.delegate = self
+        scrollView.bounces = false
 
         scrollView.frame = CGRect(x: 0, y: 0, width: contentWidth, height: contentHeight)
         containerView.addSubview(scrollView)
