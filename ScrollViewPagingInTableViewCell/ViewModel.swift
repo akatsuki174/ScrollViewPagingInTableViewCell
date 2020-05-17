@@ -13,11 +13,11 @@ class ViewModel {
     private var items: [Item] = []
     
     func createItems() {
-        items = [Item(id: 1, images: createImageArray(), currentIndex: 0),
-                 Item(id: 2, images: createImageArray(), currentIndex: 0),
-                 Item(id: 3, images: createImageArray(), currentIndex: 0),
-                 Item(id: 4, images: createImageArray(), currentIndex: 0),
-                 Item(id: 5, images: createImageArray(), currentIndex: 0)]
+        items = [Item(id: 1, images: createImageArray(), currentPage: 0),
+                 Item(id: 2, images: createImageArray(), currentPage: 0),
+                 Item(id: 3, images: createImageArray(), currentPage: 0),
+                 Item(id: 4, images: createImageArray(), currentPage: 0),
+                 Item(id: 5, images: createImageArray(), currentPage: 0)]
     }
     
     func numberOfRowsInSection(section: Int) -> Int {
@@ -33,10 +33,13 @@ class ViewModel {
         return [UIImage(named: "image1")!, UIImage(named: "image2")!, UIImage(named: "image3")!]
     }
     
+    func changePage(index: Int, page: Int) {
+        items[index].currentPage = page
+    }
 }
 
 struct Item {
     let id: Int
     let images: [UIImage]
-    var currentIndex: Int = 0
+    var currentPage: Int = 0
 }

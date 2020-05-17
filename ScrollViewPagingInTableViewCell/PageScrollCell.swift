@@ -18,6 +18,7 @@ class PageScrollCell: UITableViewCell {
     private lazy var contentHeight: CGFloat = {
         return contentWidth * 0.5
     }()
+    weak var delegate: PageScrollCellDelegate?
 
     static func nib() -> UINib {
         return UINib(nibName: cellName, bundle: nil)
@@ -48,7 +49,7 @@ class PageScrollCell: UITableViewCell {
             imageView.image = value
             scrollView.addSubview(imageView)
         }
-        scrollView.frame = CGRect(x: CGFloat(item.currentIndex) * contentWidth, y: 0, width: contentWidth, height: contentHeight)
+        scrollView.contentOffset = CGPoint(x: CGFloat(item.currentPage) * contentWidth, y: 0)
         scrollView.contentSize = CGSize(width: contentWidth * CGFloat(item.images.count), height: contentHeight)
     }
     
@@ -56,7 +57,11 @@ class PageScrollCell: UITableViewCell {
 
 extension PageScrollCell: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-            let pageIndex = round(scrollView.contentOffset.x/contentWidth)
-        print("index-------------\(pageIndex)")
+            let pageIndex = round(scrollView.contentOffset.x / contentWidth)
+        delegate?.pageScrolled(self, page: Int(pageIndex))
     }
+}
+
+protocol PageScrollCellDelegate: AnyObject {
+    func pageScrolled(_ cell: PageScrollCell, page: Int)
 }
