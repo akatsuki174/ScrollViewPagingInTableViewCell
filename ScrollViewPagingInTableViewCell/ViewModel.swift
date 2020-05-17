@@ -26,6 +26,7 @@ class ViewModel {
     }
     
     func content(index: Int) -> Item {
+        if (index >= items.count) { fatalError("out of index") }
         return items[index]
     }
     
@@ -34,6 +35,7 @@ class ViewModel {
     }
     
     func changePage(index: Int, page: Int) {
+        if (index >= items.count) { fatalError("out of index") }
         items[index].currentPage = page
     }
 }

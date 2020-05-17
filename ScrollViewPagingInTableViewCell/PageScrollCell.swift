@@ -42,7 +42,7 @@ class PageScrollCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setContent(item: Item) {
+    func setItem(item: Item) {
         titleLabel.text = String(item.id)
         for (index, value) in item.images.enumerated() {
             let imageView = UIImageView(frame: CGRect(x: CGFloat(index) * contentWidth, y: 0, width: contentWidth, height: contentHeight))
